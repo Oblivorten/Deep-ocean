@@ -30,6 +30,12 @@ public class BoatController : MonoBehaviour
             TakeDamage();
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Treasure"))
+        {
+            AddScore();
+            Destroy(other.gameObject);
+        }
     }
 
     private void TakeDamage()
@@ -39,6 +45,12 @@ public class BoatController : MonoBehaviour
         {
             GameOver();
         }
+        UpdateText();
+    }
+
+    private void AddScore()
+    {
+        score++;
         UpdateText();
     }
 
