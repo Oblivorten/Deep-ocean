@@ -1,3 +1,4 @@
+using System.Threading;
 using TMPro;
 using UnityEngine;
 
@@ -36,6 +37,12 @@ public class BoatController : MonoBehaviour
             AddScore();
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("Booster"))
+        {
+            AddBooster();
+            Destroy(other.gameObject);
+        }
     }
 
     private void TakeDamage()
@@ -52,6 +59,11 @@ public class BoatController : MonoBehaviour
     {
         score++;
         UpdateText();
+    }
+
+    private void AddBooster()
+    {
+        speed += 2f;
     }
 
     private void UpdateText()

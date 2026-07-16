@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Mine
   - Treasure
+  - Booster
   layers:
   - Default
   - TransparentFX

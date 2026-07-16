@@ -119,6 +119,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &240905633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 240905635}
+  - component: {fileID: 240905634}
+  m_Layer: 0
+  m_Name: BoosterSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &240905634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240905633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d519cc7e41fae54eba5cfba992f49ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 1622829845173223385, guid: f676aec505d4887489aaf4dde026cc4e, type: 3}
+  spawnInterval: 20
+--- !u!4 &240905635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240905633}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.45935836, y: -0.29678208, z: 0.9755759}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +302,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &533751456 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3799282722340179846, guid: 8da8259672e9def4e9b6beafa71284d1, type: 3}
+  m_PrefabInstance: {fileID: 1963682897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &533751461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533751456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b97366830a62614a8644cbfa9fcba7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671974165}
-  - component: {fileID: 671974164}
+  - component: {fileID: 671974166}
   m_Layer: 0
   m_Name: MineSpawner
   m_TagString: Untagged
@@ -357,19 +421,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &671974164
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671974163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a323a5edf022f394caf53e29a82e6034, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mine: {fileID: 3799282722340179846, guid: 8da8259672e9def4e9b6beafa71284d1, type: 3}
 --- !u!4 &671974165
 Transform:
   m_ObjectHideFlags: 0
@@ -385,6 +436,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &671974166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671974163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d519cc7e41fae54eba5cfba992f49ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 3799282722340179846, guid: 8da8259672e9def4e9b6beafa71284d1, type: 3}
+  spawnInterval: 2
 --- !u!1 &949583622
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +586,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 949583622}
   m_CullTransparentMesh: 1
+--- !u!1 &1443334580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6672642051627934682, guid: 41f2861edd976af44b3337a0c7dbdee4, type: 3}
+  m_PrefabInstance: {fileID: 1318990495704670204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1443334585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443334580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b97366830a62614a8644cbfa9fcba7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!1 &1574698513
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1916801290}
-  - component: {fileID: 1916801289}
+  - component: {fileID: 1916801291}
   m_Layer: 0
   m_Name: TreasureSpawner
   m_TagString: Untagged
@@ -856,19 +939,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1916801289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916801288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 139ffa9881aaa514ca56616fa303e883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  treasure: {fileID: 6672642051627934682, guid: 41f2861edd976af44b3337a0c7dbdee4, type: 3}
 --- !u!4 &1916801290
 Transform:
   m_ObjectHideFlags: 0
@@ -884,6 +954,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1916801291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916801288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d519cc7e41fae54eba5cfba992f49ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 6672642051627934682, guid: 41f2861edd976af44b3337a0c7dbdee4, type: 3}
+  spawnInterval: 4
 --- !u!1001 &1963682897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -936,10 +1020,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3799282722340179846, guid: 8da8259672e9def4e9b6beafa71284d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 533751461}
   m_SourcePrefab: {fileID: 100100000, guid: 8da8259672e9def4e9b6beafa71284d1, type: 3}
 --- !u!1 &1966249100
 GameObject:
@@ -1165,10 +1253,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Treasure
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6672642051627934682, guid: 41f2861edd976af44b3337a0c7dbdee4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1443334585}
   m_SourcePrefab: {fileID: 100100000, guid: 41f2861edd976af44b3337a0c7dbdee4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1183,3 +1275,4 @@ SceneRoots:
   - {fileID: 1574698516}
   - {fileID: 1318990495704670204}
   - {fileID: 1916801290}
+  - {fileID: 240905635}

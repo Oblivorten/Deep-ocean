@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class TreasureSpawner : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
 
-    [SerializeField] private GameObject treasure;
-    private float spawnInterval = 4f;
+    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private float spawnInterval = 2f;
     private float minY = -4.5f;
     private float maxY = 4.5f;
     private float minX = 10f;
@@ -21,19 +21,19 @@ public class TreasureSpawner : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= spawnInterval)
         {
-            SpawnTreasure();
+            SpawnObject();
             timer = 0f;
         }
     }
 
-    private void SpawnTreasure()
+    private void SpawnObject()
     {
-        if (treasure != null)
+        if (objectToSpawn != null)
         {
             float randomY = Random.Range(minY, maxY);
             float randomX = Random.Range(minX, maxX);
             Vector3 spawnPosition = new Vector3(randomX, randomY, 0f);
-            Instantiate(treasure, spawnPosition, Quaternion.identity);
+            Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
         }
         else
         {
