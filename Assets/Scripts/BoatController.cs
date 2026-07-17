@@ -1,4 +1,3 @@
-using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,11 +10,14 @@ public class BoatController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI hpText;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameOverPanel;
+    [SerializeField] private GameObject mainMenuPanel;
 
     private void Start()
     {
+        Time.timeScale = 0f;
         UpdateText();
         gameOverPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
 
     }
 
@@ -97,11 +99,18 @@ public class BoatController : MonoBehaviour
     private void GameOver()
     {
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StartGame()
+    {
+        mainMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
     }
 
 }
