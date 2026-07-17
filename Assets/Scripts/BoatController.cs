@@ -1,6 +1,7 @@
 using System.Threading;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatController : MonoBehaviour
 {
@@ -9,10 +10,13 @@ public class BoatController : MonoBehaviour
     private int score = 0;
     [SerializeField] private TextMeshProUGUI hpText;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private GameObject gameOverPanel;
 
     private void Start()
     {
         UpdateText();
+        gameOverPanel.SetActive(false);
+
     }
 
     private void Update()
@@ -92,8 +96,12 @@ public class BoatController : MonoBehaviour
 
     private void GameOver()
     {
-        return;
+        gameOverPanel.SetActive(true);
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
 }
