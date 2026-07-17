@@ -11,11 +11,6 @@ public class Spawner : MonoBehaviour
     private float maxX = 15f;
     private float timer;
 
-    private void Start()
-    {
-        timer = spawnInterval;
-    }
-
     private void Update()
     {
         timer += Time.deltaTime;

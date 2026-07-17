@@ -43,6 +43,12 @@ public class BoatController : MonoBehaviour
             AddBooster();
             Destroy(other.gameObject);
         }
+
+        if(other.CompareTag("Healer"))
+        {
+            Heal();
+            Destroy(other.gameObject);
+        }
     }
 
     private void TakeDamage()
@@ -64,6 +70,18 @@ public class BoatController : MonoBehaviour
     private void AddBooster()
     {
         speed += 2f;
+    }
+
+    private void Heal()
+    {
+        if (lifes < 3)
+        {
+            lifes++;
+            UpdateText();
+        } else
+        {
+            return;
+        }
     }
 
     private void UpdateText()
